@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+.footer-responsive {
+  opacity: 0;
+  animation: fadeInFooter 0.1s ease-in forwards;
+  /* Font-family from inline styles is now here */
+  font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@keyframes fadeInFooter {
+  to { opacity: 1; }
+}
+
+@keyframes borderGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+  .footer-content-responsive {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-responsive {
+    padding: 32px 0 0 0 !important;
+    margin-top: 60px !important;
+  }
+
+  .footer-container-responsive {
+    padding: 0 20px !important;
+  }
+
+  .footer-content-responsive {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .footer-bottom-responsive {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 20px 0 !important;
+  }
+
+  .footer-badges-responsive {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
